@@ -22,12 +22,12 @@ public class BinarySearch {
         return -1;
     }
 
-    public static void main(String[] args) {
-        int[] whiteList = In.readInts(args[0]);
-        Arrays.sort(whiteList);
+
+    public static void sort(int[] array) {
+        Arrays.sort(array);
         while (!StdIn.isEmpty()){
             int key = StdIn.readInt();
-            if (rank(key,whiteList)<0){
+            if (rank(key,array)<0){
                 StdOut.println(key);
             }
         }

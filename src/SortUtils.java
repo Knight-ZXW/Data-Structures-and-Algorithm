@@ -7,7 +7,7 @@ import java.util.Random;
  * Created by zhuoxiuwu on 2017/2/9.
  */
 public class SortUtils {
-    public static final int INTSIZE = 5;
+    public static final int INTSIZE = 1000;
     public static int[] unSorted = new int[INTSIZE];
 
     static {

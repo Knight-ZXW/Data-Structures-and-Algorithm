@@ -7,19 +7,20 @@ import java.util.Comparator;
 public class SelectionSearch {
     public static void sort(int[] a){
         //将a 按照升序排列
-        int N = a.length;
+        //每次排列都找出一个最小值，
+        int[] cloneArray = a.clone();
+        int N = cloneArray.length;
         for (int i = 0; i < N; i++) {
             int minIdx = i;
 
             for (int j = i+1; j < N; j++) {
 
-                if (SortUtils.less(a[j],a[minIdx])){
+                if (SortUtils.less(cloneArray[j],cloneArray[minIdx])){
                     minIdx = j;
                 }
             }
-            SortUtils.exch(a,i,minIdx);
+            SortUtils.exch(cloneArray,i,minIdx);
         }
-        SortUtils.show(a);
     }
 
     public static void main(String[] args) {
