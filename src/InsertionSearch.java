@@ -19,10 +19,10 @@ public class InsertionSearch {
      */
 
     //该算法对非随机形算法很有效，比如接近排序好的数组
-    public static void sort(int[] a){//1 4 2
-        int[] cloneArray = a.clone();
+    public static void sort(double[] a){//1 4 2
+        double[] cloneArray = a.clone();
         int N = cloneArray.length;
-        int target;
+        double target;
         int j;
         for (int i = 1; i < N; i++) {
             j = i;

@@ -8,12 +8,12 @@ import java.util.Random;
  */
 public class SortUtils {
     public static final int INTSIZE = 1000;
-    public static int[] unSorted = new int[INTSIZE];
+    public static double[] unSorted = new double[INTSIZE];
 
     static {
         Random random = new Random();
         for (int i = 0; i < INTSIZE; i++) {
-            unSorted[i] = random.nextInt(INTSIZE);
+            unSorted[i] = random.nextDouble();
         }
     }
 
@@ -23,8 +23,8 @@ public class SortUtils {
         a[j] = t;
     }
 
-    public static void exch(int[] a, int i, int j) {
-        int t = a[i];
+    public static void exch(double[] a, int i, int j) {
+        double t = a[i];
         a[i] = a[j];
         a[j] = t;
     }
@@ -67,7 +67,7 @@ public class SortUtils {
     public static void printDefaultArray(){
         printArray(unSorted);
     }
-    public static void printArray(int[] a) {
+    public static void printArray(double[] a) {
         for (int i = 0; i < a.length; i++) {
             StdOut.print(a[i] + " ");
         }
@@ -75,18 +75,16 @@ public class SortUtils {
 
     }
 
-    public static boolean isSorted(int[] a) {
+    public static boolean isSorted(double[] a) {
         for (int i = 1; i < a.length; i++) {
-
             if (less(a[i], a[i - 1])) {
-                StdOut.print("未排序好");
-                printArray(a);
+                System.out.println("没有排序好");
                 return false;
             }
         }
         StdOut.print("已经排序好了");
-        for (int i = 0; i < a.length; i++) {
-            StdOut.print(a[i] + " ");
+        for (double anA : a) {
+            StdOut.print(anA + " ");
         }
         return true;
     }

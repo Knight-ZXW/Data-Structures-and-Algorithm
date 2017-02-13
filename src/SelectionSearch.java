@@ -5,10 +5,10 @@ import java.util.Comparator;
  * 选择排序
  */
 public class SelectionSearch {
-    public static void sort(int[] a){
+    public static void sort(double[] a){
         //将a 按照升序排列
         //每次排列都找出一个最小值，
-        int[] cloneArray = a.clone();
+        double[] cloneArray = a.clone();
         int N = cloneArray.length;
         for (int i = 0; i < N; i++) {
             int minIdx = i;
