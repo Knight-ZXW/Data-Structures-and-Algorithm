@@ -1,3 +1,5 @@
+package com.zous;
+
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
@@ -26,7 +28,7 @@ public class SortCompareTest {
 
     public static double time(Class alg, double[] a) {
         Stopwatch timer = new Stopwatch();
-        if (alg == InsertionSearch.class) InsertionSearch.sort(a);
+        if (alg == InsertionSort.class) InsertionSort.sort(a);
         else if (alg == SelectionSearch.class) SelectionSearch.sort(a);
         else if (alg ==ShellSearch.class) {ShellSearch.sort(a);}
         return timer.elapsedTime();
@@ -35,8 +37,8 @@ public class SortCompareTest {
     public static void main(String[] args) {
         int N = 100;
         int T =1;
-        System.out.print("InsertionSearch: " + timeRandomInput(InsertionSearch.class,N,T));
-        System.out.println("SelectionSearch: " + timeRandomInput(SelectionSearch.class, N,T));
-        System.out.println("ShellSearch: " + timeRandomInput(ShellSearch.class, N,T));
+        System.out.print("com.zous.InsertionSort: " + timeRandomInput(InsertionSort.class,N,T));
+        System.out.println("com.zous.SelectionSearch: " + timeRandomInput(SelectionSearch.class, N,T));
+        System.out.println("com.zous.ShellSearch: " + timeRandomInput(ShellSearch.class, N,T));
     }
 }

@@ -1,11 +1,9 @@
-import edu.princeton.cs.algs4.StdOut;
-
-import javax.sound.midi.Soundbank;
+package com.zous;
 
 /**
  * Created by zhuoxiuwu on 2017/2/10.
  */
-public class InsertionSearch {
+public class InsertionSort {
     /**
      * 插入排序的运行时间是线性的，每次循环 它都会到左边已经排序好的数组序列中去查找它合适的位置，左侧总是有序的，所以到末端时就排序好了
      * @param a

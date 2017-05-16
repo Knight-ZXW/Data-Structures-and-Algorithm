@@ -1,19 +1,20 @@
+package com.zous;
+
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.Comparator;
 import java.util.Random;
 
 /**
  * Created by zhuoxiuwu on 2017/2/9.
  */
 public class SortUtils {
-    public static final int INTSIZE = 1000;
+    public static final int INTSIZE = 10;
     public static double[] unSorted = new double[INTSIZE];
 
     static {
         Random random = new Random();
         for (int i = 0; i < INTSIZE; i++) {
-            unSorted[i] = random.nextDouble();
+            unSorted[i] = random.nextInt();
         }
     }
 
@@ -27,6 +28,7 @@ public class SortUtils {
         double t = a[i];
         a[i] = a[j];
         a[j] = t;
+        System.out.println("交换 "+a[i]+":"+a[j]);
     }
 
     public static boolean less(Comparable i, Comparable j) {

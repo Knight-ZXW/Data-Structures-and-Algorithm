@@ -1,4 +1,5 @@
-import edu.princeton.cs.algs4.In;
+package com.zous;
+
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
